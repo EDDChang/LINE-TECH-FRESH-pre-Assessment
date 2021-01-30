@@ -11,7 +11,6 @@ import random
 
 app = Flask(__name__)
 
-# LINE 聊天機器人的基本資料
 config = configparser.ConfigParser()
 config.read('config.ini')
 
@@ -19,7 +18,6 @@ line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 
-# 接收 LINE 的資訊
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
@@ -36,25 +34,11 @@ def callback():
 
     return 'OK'
 
-# 學你說話
 @handler.add(MessageEvent, message=TextMessage)
-def pretty_echo(event):
-    
-    if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
-        
-        # Phoebe 愛唱歌
-        pretty_note = '♫♪♬'
-        pretty_text = ''
-        
-        for i in event.message.text:
-        
-            pretty_text += i
-            pretty_text += random.choice(pretty_note)
-    
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=pretty_text)
-        )
-
+def echo(event):
+    msg = event.message.text
+    print(msg)
+    msg = msg.encode('utf-8')
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=event.message.text))
 if __name__ == "__main__":
     app.run()
