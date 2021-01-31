@@ -37,11 +37,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
     msg = event.message.text
+    msg = msg.lower()
     print(msg)
-    reply_msg = msg
-    reply_file = reply_dir
-    if msg == 'intro' or msg == 'Intro':
-        reply_file += "intro.txt"
+    reply_file = reply_dir + msg + '.txt'
     try:
         f = open(reply_file, 'r')
     except:
