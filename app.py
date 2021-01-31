@@ -38,8 +38,8 @@ def callback():
 def echo(event):
     msg = event.message.text
     print(msg)
-    msg = msg.encode('utf-8')
     reply_msg = msg
+    msg = msg.encode('utf-8')
     if msg == 'intro' or msg == 'Intro':
         f = open(reply_dir + 'intro.txt', r)
         reply_msg = f.read()
