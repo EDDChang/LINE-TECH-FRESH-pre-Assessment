@@ -37,6 +37,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
     msg = event.message.text
+    msg = msg.strip().lstrip().rstrip()
     msg = msg.lower()
     print(msg)
     reply_file = reply_dir + msg + '.txt'
