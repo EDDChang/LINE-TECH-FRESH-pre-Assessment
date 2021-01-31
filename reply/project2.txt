@@ -2,4 +2,4 @@
 
 https://github.com/EDDChang/Under-Mask-Facial-Expression-prediction
 
-這個project主要是想探討CNN模型能不能夠辨識帶著口罩的人的表情。
+這個project主要是想探討 CNN模型能不能夠辨識帶著口罩的人的表情。

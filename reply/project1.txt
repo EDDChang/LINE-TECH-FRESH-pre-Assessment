@@ -2,3 +2,4 @@
 
 https://github.com/EDDChang/Few-shot-intent-prediction-on-DialoGLUE
 
+這個題目主要的目標是用各種不同的方式提升Few shot learning的表現，詳細的方式可以參考 github。
