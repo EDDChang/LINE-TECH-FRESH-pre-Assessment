@@ -41,7 +41,7 @@ def echo(event):
     reply_msg = msg
     #msg = msg.encode('utf-8')
     if msg == 'intro' or msg == 'Intro':
-        f = open(reply_dir + 'intro.txt', r)
+        f = open(reply_dir + 'intro.txt', 'r')
         reply_msg = f.read()
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
 if __name__ == "__main__":
