@@ -7,7 +7,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 import configparser
 
-import random
+reply_dir = './reply'
 
 app = Flask(__name__)
 
@@ -39,6 +39,10 @@ def echo(event):
     msg = event.message.text
     print(msg)
     msg = msg.encode('utf-8')
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=event.message.text))
+    reply_msg = msg
+    if msg == 'intro' or msg == 'Intro':
+        f = open(reply_dir + 'intro.txt', r)
+        reply_msg = f.read()
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
 if __name__ == "__main__":
     app.run()
