@@ -1,6 +1,6 @@
-我是一個介紹LINE TECH FRESH實習生應徵者張華恩(Edward)的聊天機器人!
+抱歉 ! 機器人無法辨識您的指令。
 
-請依照下列指示輸入指令以了解我更多 !
+請依照下列指示輸入指令，感謝 !
 
 基本資訊 : basic info
 自我介紹 : intro
@@ -8,9 +8,7 @@
 做過的project : project1/project2
 課外活動 : extra
 
-I'm a chat bot promoting a candidate for LINE TECH FRESH intern, Hua-EN Chang (Edward).
-
-Please follow the following instructions to know more about me !
+Please follow the following instructions, thanks.
 
 Basic information : basic info
 Self introduction : intro
