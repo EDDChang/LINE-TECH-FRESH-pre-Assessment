@@ -7,7 +7,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 import configparser
 
-reply_dir = './reply'
+reply_dir = './reply/'
 
 app = Flask(__name__)
 
