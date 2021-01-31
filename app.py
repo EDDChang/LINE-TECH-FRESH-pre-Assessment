@@ -39,10 +39,14 @@ def echo(event):
     msg = event.message.text
     print(msg)
     reply_msg = msg
-    #msg = msg.encode('utf-8')
+    reply_file = reply_dir
     if msg == 'intro' or msg == 'Intro':
-        f = open(reply_dir + 'intro.txt', 'r')
-        reply_msg = f.read()
+        reply_file += "intro.txt"
+    try:
+        f = open(reply_file, 'r')
+    except:
+        f = open('./reply/exception.txt', 'r')
+    reply_msg = f.read()
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
 if __name__ == "__main__":
     app.run()
