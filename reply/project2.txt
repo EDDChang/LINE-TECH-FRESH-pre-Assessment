@@ -1,5 +1,5 @@
 以下是我這學期修系上的選修課「感知運算」做的final project。
 
-https://github.com/EDDChang/Under-Mask-Facial-Expression-prediction
+https://github.com/EDDChang/Under-Mask-Facial-Expression-Prediction
 
 這個project主要是想探討 CNN模型能不能夠辨識帶著口罩的人的表情。
