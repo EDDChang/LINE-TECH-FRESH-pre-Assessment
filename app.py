@@ -48,7 +48,7 @@ def echo(event):
         print(reply_msg)
         for sentence in test:
 #            time.sleep(1.0)
-            line_bot_api.push_message(event.userId, TextSendMessage(text=sentence))
+            line_bot_api.push_message(event.source.userId, TextSendMessage(text=sentence))
     except:
         f = open('./reply/exception.txt', 'r')
         reply_msg = f.read()
