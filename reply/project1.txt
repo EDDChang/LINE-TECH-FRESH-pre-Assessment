@@ -9,9 +9,5 @@
 實作的方式是在 model算 loss的時候多加入 training data的 sequence與 label sequence的距離
 這個距離可以是 euclidean distance或是 cosine similarity等計算向量之間的相似度的方式
 而實驗的結果也確實能夠提升模型的表現
-接下來我想講一些我的心得
-因為我修專題之前幾乎沒有 ML的經驗，因此這個 project相對其他實驗室的同學們算是相對簡單的題目
-但是透過做專題的過程中去學習一些相關的知識，對我來說收穫很大
-也對 few shot相關的題目有一點興趣，下個學期的專題應該也會朝這個方向去找題目
 如果對於更詳細的資訊或是 source code有興趣的話，這是 Project的 Github網址，歡迎參考~
 https://github.com/EDDChang/Few-shot-intent-prediction-on-DialoGLUE
