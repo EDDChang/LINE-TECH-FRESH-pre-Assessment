@@ -40,26 +40,22 @@ def echo(event):
     msg = msg.strip().lstrip().rstrip()
     msg = msg.lower()
     reply_file = reply_dir + msg + '.txt'
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text='test'))
-    return
+    exception = False
     try:
         f = open(reply_file, 'r')
     except:
         f = open('./reply/exception.txt', 'r')
-        reply_msg = r.read()
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
-        return
+        exception = True
     
     reply_msg = f.read()
     
-    if msg != 'info':
-        reply_msg = f.read().split('\n')
+    if msg == 'info' or exception:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
+    else:
+        reply_msg = reply_msg.split('\n')
         for sentence in reply_msg:
             time.sleep(2.5)
             line_bot_api.push_message(event.source.sender_id, TextSendMessage(text=sentence))
-    else:
-        reply_msg = f.read()
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
     
     f.close()
 if __name__ == "__main__":
