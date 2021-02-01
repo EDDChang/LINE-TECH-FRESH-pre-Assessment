@@ -6,7 +6,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 import configparser
-
+import time
 reply_dir = './reply/'
 
 app = Flask(__name__)
@@ -46,6 +46,8 @@ def echo(event):
     except:
         f = open('./reply/exception.txt', 'r')
     reply_msg = f.read()
+    time.sleep(1.0)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
+    f.close()
 if __name__ == "__main__":
     app.run()

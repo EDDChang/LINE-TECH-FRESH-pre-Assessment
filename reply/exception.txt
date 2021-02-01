@@ -1,17 +1,17 @@
-抱歉 ! 機器人無法辨識您的指令。
+非常抱歉 ! 我沒有辦法辨識您的指令...
 
-請依照下列指示輸入指令，感謝 !
+請依照下列指示輸入指令，謝謝 !
 
-基本資訊 : basic info
+基本資訊 : info
 自我介紹 : intro
 工作經驗 : workexp
-做過的project : project1/project2
+近期做過的project : project1/project2
 課外活動 : extra
 
 Please follow the following instructions, thanks.
 
-Basic information : basic info
+Basic information : info
 Self introduction : intro
 Work experience : workexp
-Project : project1/project2
+Recent project : project1/project2
 Extracurricular activities : extra
