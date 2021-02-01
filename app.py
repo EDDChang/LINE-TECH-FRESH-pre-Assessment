@@ -41,11 +41,12 @@ def echo(event):
     msg = msg.lower()
     print(msg)
     reply_file = reply_dir + msg + '.txt'
+    test = ['1','2'] 
     try:
         f = open(reply_file, 'r')
         reply_msg = f.read().split('\n')
         print(reply_msg)
-        for sentence in reply_msg:
+        for sentence in test:
 #            time.sleep(1.0)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=sentence))
     except:
