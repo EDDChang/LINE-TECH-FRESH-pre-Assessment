@@ -45,7 +45,7 @@ def echo(event):
         f = open(reply_file, 'r')
         reply_msg = f.read().split('\n')
         for sentence in reply_msg:
-            time.sleep(1.0)
+#            time.sleep(1.0)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=sentence))
     except:
         f = open('./reply/exception.txt', 'r')

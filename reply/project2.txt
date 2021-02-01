@@ -1,21 +1,11 @@
 我第二個想介紹的專案是我這學期修系上的選修課「感知運算」做的final project
-
 題目的名稱是 Under-Mask-Facial-Expression-Prediction
-
 以下是題目的簡介
-
 由於現在疫情的關係，戴著口罩的人很多，也讓大家看起來都是面無表情
-
 但其實戴著口罩的時候人並不是不會做出微笑、厭惡等等的表情
-
 因此我就想試試看有沒有辦法知道戴著口罩的人的表情，而開始做這個題目
-
 這個 Project中主要的成果是將 FER-2013這個人臉表情 dataset中的人都戴上口罩
-
 並且跑實驗，實驗的內容有以下
-
 training時讓 model看/不看戴口罩的人，testing的時候也有戴/不戴口罩的表情
-
 如果對其他詳細的內容或是 source code有興趣可以參考我的 Github~
-
 https://github.com/EDDChang/Under-Mask-Facial-Expression-Prediction
