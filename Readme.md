@@ -1,5 +1,6 @@
 # LINE TECH FRESH Pre-Assessment
 ## 說明
+以 flask部署到heroku的方式實作
 此Chat bot以下指令的方式互動，目前提供的指令有以下:
 - 基本資訊 : info
 - 自我介紹 : intro
