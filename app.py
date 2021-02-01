@@ -40,6 +40,8 @@ def echo(event):
     msg = msg.strip().lstrip().rstrip()
     msg = msg.lower()
     reply_file = reply_dir + msg + '.txt'
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text='test'))
+    return
     try:
         f = open(reply_file, 'r')
     except:
