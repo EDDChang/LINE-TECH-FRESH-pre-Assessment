@@ -39,7 +39,7 @@ def echo(event):
     msg = event.message.text
     msg = msg.strip().lstrip().rstrip()
     msg = msg.lower()
-    print(msg)
+    print(event)
     reply_file = reply_dir + msg + '.txt'
     test = ['1','2'] 
     try:
