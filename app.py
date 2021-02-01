@@ -39,15 +39,13 @@ def echo(event):
     msg = event.message.text
     msg = msg.strip().lstrip().rstrip()
     msg = msg.lower()
-    print(type(event))
     reply_file = reply_dir + msg + '.txt'
-    test = ['1','2'] 
     try:
         f = open(reply_file, 'r')
-        reply_msg = f.read().split('\n')
-        print(reply_msg)
-        for sentence in test:
-#            time.sleep(1.0)
+        if msg != 'info':
+            reply_msg = f.read().split('\n')
+        for sentence in reply_msg:
+            time.sleep(1.0)
             line_bot_api.push_message(event.source.sender_id, TextSendMessage(text=sentence))
     except:
         f = open('./reply/exception.txt', 'r')
