@@ -48,15 +48,14 @@ def echo(event):
         exception = True
     
     reply_msg = f.read()
-    
+    print(reply_msg)
     if msg == 'info' or exception:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_msg))
     else:
         reply_msg = reply_msg.split('\n')
         for sentence in reply_msg:
+            line_bot_api.push_message(event.source.sender_id, TextSendMessage(text=sentence)) 
             time.sleep(2.5)
-            line_bot_api.push_message(event.source.sender_id, TextSendMessage(text=sentence))
-    
     f.close()
 if __name__ == "__main__":
     app.run()
